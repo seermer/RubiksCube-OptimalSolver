@@ -25,7 +25,7 @@ if not path.isfile(fname):
     fh = open(fname, "wb")
     twist_move.tofile(fh)
 else:
-    print("loading " + fname + " table...")
+    # print("loading " + fname + " table...")
     fh = open(fname, "rb")
     twist_move = ar.array('H')
     twist_move.fromfile(fh, N_TWIST * N_MOVE)
@@ -50,7 +50,7 @@ if not path.isfile(fname):
     fh = open(fname, "wb")
     flip_move.tofile(fh)
 else:
-    print("loading " + fname + " table...")
+    # print("loading " + fname + " table...")
     fh = open(fname, "rb")
     flip_move = ar.array('H')
     flip_move.fromfile(fh, N_FLIP * N_MOVE)
@@ -78,7 +78,7 @@ if not path.isfile(fname):
     slice_sorted_move.tofile(fh)
     print()
 else:
-    print("loading " + fname + " table...")
+    # print("loading " + fname + " table...")
     fh = open(fname, "rb")
     slice_sorted_move = ar.array('H')
     slice_sorted_move.fromfile(fh, N_SLICE_SORTED * N_MOVE)
@@ -109,7 +109,7 @@ if not path.isfile(fname):
     fh.close()
     print()
 else:
-    print("loading " + fname + " table...")
+    # print("loading " + fname + " table...")
     fh = open(fname, "rb")
     corners_move = ar.array('H')
     corners_move.fromfile(fh, N_CORNERS * N_MOVE)
