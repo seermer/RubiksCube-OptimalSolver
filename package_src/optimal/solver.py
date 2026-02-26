@@ -137,11 +137,11 @@ def solve(cubestring):
         if togo > 13:
             t = time.monotonic() - s_time + 0.0001
             # print('depth ' + str(togo) + ' done in ' + str(round(t, 2)) + ' s, ' + str(
-                nodecount) + ' nodes generated, ' + 'about ' + str(round(nodecount / t)) + ' nodes/s')
+            #     nodecount) + ' nodes generated, ' + 'about ' + str(round(nodecount / t)) + ' nodes/s')
         togo += 1
     # print('total time: ' + str(
-        round(time.monotonic() - start_time, 2)) + ' s, ' + 'nodes generated: ' + str(
-        totnodes + nodecount))
+    #     round(time.monotonic() - start_time, 2)) + ' s, ' + 'nodes generated: ' + str(
+    #     totnodes + nodecount))
     s = ''
     for m in sofar:
         s += m.name + ' '
@@ -195,11 +195,11 @@ def solveto(cubestring, goalstring):
         if togo > 13:
             t = time.monotonic() - s_time + 0.0001
             # print('depth ' + str(togo) + ' done in ' + str(round(t, 2)) + ' s, ' + str(
-                nodecount) + ' nodes generated, ' + 'about ' + str(round(nodecount / t)) + ' nodes/s')
+            #     nodecount) + ' nodes generated, ' + 'about ' + str(round(nodecount / t)) + ' nodes/s')
         togo += 1
     # print('total time: ' + str(
-        round(time.monotonic() - start_time, 2)) + ' s, ' + 'nodes generated: ' + str(
-        totnodes + nodecount))
+    #     round(time.monotonic() - start_time, 2)) + ' s, ' + 'nodes generated: ' + str(
+    #     totnodes + nodecount))
     s = ''
     for m in sofar:
         s += m.name + ' '
