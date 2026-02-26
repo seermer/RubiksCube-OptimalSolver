@@ -86,7 +86,7 @@ for s in range(N_SYM):
 ########################################################################################################################
 
 # ###### Generate the table for the conjugation of the twist t by a symmetry s. twist_conj[t, s] = s*t*s^-1 ####
-fname = "conj_twist"
+fname = ".cache/conj_twist"
 if not path.isfile(fname):
     print('On the first run, several tables will be created. This may take 8 hours using CPython '
           '(depending on the hardware). ')
@@ -116,9 +116,9 @@ fh.close()
 
 # ############## Generate the tables to handle the symmetry reduced flip-slicesorted coordinate ########################
 
-fname1 = "fs24_classidx"
-fname2 = "fs24_sym"
-fname3 = "fs24_rep"
+fname1 = ".cache/fs24_classidx"
+fname2 = ".cache/fs24_sym"
+fname3 = ".cache/fs24_rep"
 if not (path.isfile(fname1) and path.isfile(fname2) and path.isfile(fname3)):
     print("creating " + "flipslicesorted sym-tables...")
     print("This may take about 15 minutes.")
