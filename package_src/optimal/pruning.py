@@ -36,7 +36,7 @@ def create_phase1x24_prun_table():
     """Create/load the flipslicesorted_twist_depth3 pruning table, 24x the phase1 table of the two-phase alg."""
     global flipslicesorted_twist_depth3
     total = defs.N_FLIPSLICESORTED_CLASS * defs.N_TWIST
-    fname = "phase1x24_prun"
+    fname = ".cache/phase1x24_prun"
     if not path.isfile(fname):
         print("creating " + fname + " table...")
         print('This may take 8 hours or even longer, depending on the hardware and the Python version.')
@@ -156,7 +156,7 @@ def create_phase1x24_prun_table():
 def create_cornerprun_table():
     """Create/load the corner_depth pruning table. Entry gives the number of moves which are at least necessary
     to restore the corners."""
-    fname = "cornerprun"
+    fname = ".cache/cornerprun"
     global corner_depth
     if not path.isfile(fname):
         print("creating " + fname + " table...")
