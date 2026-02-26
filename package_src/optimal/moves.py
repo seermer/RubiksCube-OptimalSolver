@@ -11,7 +11,7 @@ a = cb.CubieCube()
 
 # The twist coordinate describes the 3^7 = 2187 possible orientations of the 8 corners
 # 0 <= twist < 2187
-fname = "move_twist"
+fname = ".cache/move_twist"
 if not path.isfile(fname):
     print("creating " + fname + " table...")
     twist_move = ar.array('H', [0 for i in range(N_TWIST * N_MOVE)])
@@ -36,7 +36,7 @@ fh.close()
 
 # The flip coordinate describes the 2^11 = 2048 possible orientations of the 12 edges
 # 0 <= flip < 2048
-fname = "move_flip"
+fname = ".cache/move_flip"
 if not path.isfile(fname):
     print("creating " + fname + " table...")
     flip_move = ar.array('H', [0 for i in range(N_FLIP * N_MOVE)])
@@ -61,7 +61,7 @@ fh.close()
 
 # The slice_sorted coordinate describes the 12!/8! = 11880 possible positions of the FR, FL, BL and BR edges.
 # 0 <= slice_sorted < 11880
-fname = "move_slice_sorted"
+fname = ".cache/move_slice_sorted"
 if not path.isfile(fname):
     print("creating " + fname + " table...")
     slice_sorted_move = ar.array('H', [0 for i in range(N_SLICE_SORTED * N_MOVE)])
@@ -89,7 +89,7 @@ fh.close()
 
 # The corners coordinate describes the 8! = 40320 permutations of the corners.
 # 0 <= corners < 40320
-fname = "move_corners"
+fname = ".cache/move_corners"
 if not path.isfile(fname):
     print("creating " + fname + " table...")
     corners_move = ar.array('H', [0 for i in range(N_CORNERS * N_MOVE)])
