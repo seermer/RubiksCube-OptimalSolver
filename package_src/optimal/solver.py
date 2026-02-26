@@ -136,10 +136,10 @@ def solve(cubestring):
                coc.UD_phasex24_depth, coc.RL_phasex24_depth, coc.FB_phasex24_depth, togo)
         if togo > 13:
             t = time.monotonic() - s_time + 0.0001
-            print('depth ' + str(togo) + ' done in ' + str(round(t, 2)) + ' s, ' + str(
+            # print('depth ' + str(togo) + ' done in ' + str(round(t, 2)) + ' s, ' + str(
                 nodecount) + ' nodes generated, ' + 'about ' + str(round(nodecount / t)) + ' nodes/s')
         togo += 1
-    print('total time: ' + str(
+    # print('total time: ' + str(
         round(time.monotonic() - start_time, 2)) + ' s, ' + 'nodes generated: ' + str(
         totnodes + nodecount))
     s = ''
@@ -194,10 +194,10 @@ def solveto(cubestring, goalstring):
                coc.UD_phasex24_depth, coc.RL_phasex24_depth, coc.FB_phasex24_depth, togo)
         if togo > 13:
             t = time.monotonic() - s_time + 0.0001
-            print('depth ' + str(togo) + ' done in ' + str(round(t, 2)) + ' s, ' + str(
+            # print('depth ' + str(togo) + ' done in ' + str(round(t, 2)) + ' s, ' + str(
                 nodecount) + ' nodes generated, ' + 'about ' + str(round(nodecount / t)) + ' nodes/s')
         togo += 1
-    print('total time: ' + str(
+    # print('total time: ' + str(
         round(time.monotonic() - start_time, 2)) + ' s, ' + 'nodes generated: ' + str(
         totnodes + nodecount))
     s = ''
