@@ -146,7 +146,7 @@ def create_phase1x24_prun_table():
         fh = open(fname, "wb")
         flipslicesorted_twist_depth3.tofile(fh)
     else:
-        print("loading " + fname + " table...")
+        # print("loading " + fname + " table...")
         fh = open(fname, "rb")
         flipslicesorted_twist_depth3 = ar.array(uint32)
         flipslicesorted_twist_depth3.fromfile(fh, total // 16 + 1)
@@ -181,7 +181,7 @@ def create_cornerprun_table():
         fh = open(fname, "wb")
         corner_depth.tofile(fh)
     else:
-        print("loading " + fname + " table...")
+        # print("loading " + fname + " table...")
         fh = open(fname, "rb")
         corner_depth = ar.array('b')
         corner_depth.fromfile(fh, defs.N_CORNERS)
