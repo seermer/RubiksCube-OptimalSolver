@@ -106,7 +106,7 @@ if not path.isfile(fname):
     fh = open(fname, "wb")
     twist_conj.tofile(fh)
 else:
-    print("loading " + fname + " table...")
+    # print("loading " + fname + " table...")
     fh = open(fname, 'rb')
     twist_conj = ar.array('H')
     twist_conj.fromfile(fh, N_TWIST * N_SYM_D4h)
@@ -167,7 +167,7 @@ if not (path.isfile(fname1) and path.isfile(fname2) and path.isfile(fname3)):
     fh.close()
 
 else:
-    print("loading " + "flipslicesorted sym-tables...")
+    # print("loading " + "flipslicesorted sym-tables...")
 
     fh = open(fname1, 'rb')
     flipslicesorted_classidx = ar.array(uint32)
